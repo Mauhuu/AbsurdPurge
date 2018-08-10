@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemySpawnerScript : MonoBehaviour {
 
-	public List<GameObject> PrefabsToSpawn = new List<GameObject> ();
 
     public GameObject enemy;
     float randX;
@@ -21,15 +20,13 @@ public class EnemySpawnerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Time.time > nextSpawn)
-        {
+		if (Time.time > nextSpawn) {
 
-            nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(-7.5f, 7.5f);
-            whereToSpawn = new Vector2(randX, transform.position.y);
-			Instantiate(enemy, whereToSpawn, Quaternion.identity);
+			nextSpawn = Time.time + spawnRate;
+			randX = Random.Range (-7.5f, 7.5f);
+			whereToSpawn = new Vector2 (randX, transform.position.y);
+			Instantiate (enemy, whereToSpawn, Quaternion.identity);
 
-        }
-
+		}
 	}
 }
