@@ -9,12 +9,12 @@ public class NewMovement : MonoBehaviour {
 
 	private Vector2 direction;
 
-
+	public GameObject gameOverText, restartButton;
 
 	// Use this for initialization
 	void Start () {
-
-	
+		gameOverText.SetActive (false);
+		restartButton.SetActive (false);
 
 	}
 	
@@ -52,5 +52,17 @@ public class NewMovement : MonoBehaviour {
 		{
 				direction += Vector2.down;
 		}
+	}
+	void OnCollisionEnter2D (Collision2D col)
+	{
+		if (col.gameObject.tag.Equals ("Enemy")) 
+		{
+
+			gameOverText.SetActive (true);
+			restartButton.SetActive (true);
+			gameObject.SetActive (false);
+		}
+
+
 	}
 }

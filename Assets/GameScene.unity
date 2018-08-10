@@ -1147,8 +1147,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61616325064957716, guid: 950c3661e65b89f4dbd6f9e594c5945a, type: 2}
+    - target: {fileID: 114714638383244966, guid: 950c3661e65b89f4dbd6f9e594c5945a,
+        type: 2}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 1750330247}
+    - target: {fileID: 114714638383244966, guid: 950c3661e65b89f4dbd6f9e594c5945a,
+        type: 2}
+      propertyPath: restartButton
+      value: 
+      objectReference: {fileID: 1415652522}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950c3661e65b89f4dbd6f9e594c5945a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1032207999 stripped
@@ -1536,6 +1545,7 @@ GameObject:
   - component: {fileID: 1415652526}
   - component: {fileID: 1415652525}
   - component: {fileID: 1415652524}
+  - component: {fileID: 1415652527}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1582,8 +1592,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.6745098, g: 1, b: 0.6867958, a: 1}
+    m_PressedColor: {r: 0.64837056, g: 0.49728552, b: 0.7075472, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1600,7 +1610,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1415652525}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1415652527}
+        m_MethodName: restartScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1415652525
@@ -1637,6 +1658,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415652522}
   m_CullTransparentMesh: 0
+--- !u!114 &1415652527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415652522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746ebf0e25db3d740a41d51c6a9447f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1442072831
 GameObject:
   m_ObjectHideFlags: 0
