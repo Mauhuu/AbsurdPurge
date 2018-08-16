@@ -9,7 +9,7 @@ public class NewMovement : MonoBehaviour {
 
 	private Vector2 direction;
 
-	public GameObject gameOverText, restartButton;
+	public GameObject gameOverText, restartButton, youWinText;
 
 	// Use this for initialization
 	void Start () {
@@ -60,9 +60,11 @@ public class NewMovement : MonoBehaviour {
 
 			gameOverText.SetActive (true);
 			restartButton.SetActive (true);
+            youWinText.SetActive (false);
 			gameObject.SetActive (false);
 		}
 
 
-	}
+    }
+   
 }

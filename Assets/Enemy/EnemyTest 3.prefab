@@ -20,7 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4452849999870360}
   - component: {fileID: 212826959776709836}
-  - component: {fileID: 114656662938897616}
+  - component: {fileID: 114704731362705880}
+  - component: {fileID: 61104928022624948}
+  - component: {fileID: 50125611013004058}
+  - component: {fileID: 114614225022475628}
   m_Layer: 0
   m_Name: EnemyTest 3
   m_TagString: Untagged
@@ -35,13 +38,58 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748203186257466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.68, y: 9.27, z: 0}
+  m_LocalPosition: {x: -0.2, y: 10.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114656662938897616
+--- !u!50 &50125611013004058
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748203186257466}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!61 &61104928022624948
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748203186257466}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &114614225022475628
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,22 +97,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748203186257466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e449ed4eb2eb2f478c775e29b7f4e7e, type: 3}
+  m_Script: {fileID: 11500000, guid: e81fea9afc24d45488cd9a077503c702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  startWaitTime: 1
-  moveSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 4264865560326350, guid: fbdd7660a9ad22e489debedf32ed3c0f, type: 2}
-  - {fileID: 4925352609411960, guid: a8b7d26d8546aca409b042e9d7088ea6, type: 2}
-  - {fileID: 4648218403241986, guid: a921c43f04b87334999bbde246fc3e11, type: 2}
-  - {fileID: 4190643364541798, guid: 33e0db2e9e4488442948f176c93a0531, type: 2}
-  - {fileID: 4225562256647446, guid: 6a5a30c43ff95e24daccc251b9d6e8eb, type: 2}
-  - {fileID: 4214266953665870, guid: 9728a7044f793da4bba093757e1e00d4, type: 2}
+  youWinText: {fileID: 0}
+--- !u!114 &114704731362705880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748203186257466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcab2ec37330912408633ced7a6273f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.5
+  stoppingDistance: 10
+  retreatDistance: 5
+  player: {fileID: 0}
 --- !u!212 &212826959776709836
 SpriteRenderer:
   m_ObjectHideFlags: 1
