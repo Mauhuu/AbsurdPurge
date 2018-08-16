@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youWinText: {fileID: 0}
+  playerObjective: {fileID: 0}
+  restartButton: {fileID: 0}
 --- !u!114 &114704731362705880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcab2ec37330912408633ced7a6273f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
+  speed: 2.5
   stoppingDistance: 10
   retreatDistance: 5
   player: {fileID: 0}

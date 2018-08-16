@@ -209,6 +209,8 @@ MonoBehaviour:
   speed: 3
   gameOverText: {fileID: 0}
   restartButton: {fileID: 0}
+  youWinText: {fileID: 0}
+  objective: {fileID: 0}
 --- !u!114 &114924367520737648
 MonoBehaviour:
   m_ObjectHideFlags: 1

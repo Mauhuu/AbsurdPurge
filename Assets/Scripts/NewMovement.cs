@@ -9,13 +9,13 @@ public class NewMovement : MonoBehaviour {
 
 	private Vector2 direction;
 
-	public GameObject gameOverText, restartButton, youWinText;
+	public GameObject gameOverText, restartButton, youWinText, objective;
 
 	// Use this for initialization
 	void Start () {
 		gameOverText.SetActive (false);
 		restartButton.SetActive (false);
-
+        objective.SetActive (true);
 	}
 	
 	// Update is called once per frame
