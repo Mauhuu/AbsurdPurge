@@ -20,6 +20,9 @@ public class EndTrigger : MonoBehaviour {
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject target in gameObjects)
                 GameObject.Destroy(target);
+            GameObject[] enemySpawners = GameObject.FindGameObjectsWithTag("Spawner");
+            foreach (GameObject target in enemySpawners)
+                GameObject.Destroy(target);
             enSpawner.SetActive(false);
             youWinText.SetActive (true);
             playerObjective.SetActive (false);
