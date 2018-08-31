@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 114092669708248282}
   - component: {fileID: 61242865879498726}
   - component: {fileID: 96249080154588496}
-  m_Layer: 8
-  m_Name: EnemyTest
+  m_Layer: 0
+  m_Name: EnemyTest 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,19 +180,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e449ed4eb2eb2f478c775e29b7f4e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  startWaitTime: 2
+  speed: 3
+  startWaitTime: 3
   moveSpots:
   - {fileID: 4061998209703704, guid: 10a499e70a73e9b41a50850386b7f0dd, type: 2}
   - {fileID: 4871813980105960, guid: a6c4e313be39c004f989b1661d70d70b, type: 2}
   - {fileID: 4903886130472416, guid: 943b701ac1d97c44490a5eb72b298554, type: 2}
   - {fileID: 4302290635179044, guid: 6e6c396d6a5c3d34093429ebaefdf12e, type: 2}
   - {fileID: 4264865560326350, guid: fbdd7660a9ad22e489debedf32ed3c0f, type: 2}
+  - {fileID: 4296846121285012, guid: 7bd2c4cd014b71d438b250092c2ec5eb, type: 2}
+  - {fileID: 4536750310389612, guid: e781b313257577d44ac7091d8bf84e08, type: 2}
+  - {fileID: 4287174019701708, guid: 8eaee8230bb3e684ab74df46966104f3, type: 2}
+  - {fileID: 4471666237901838, guid: b825aca10b1515846b3fc92ebeaccb62, type: 2}
   - {fileID: 4925352609411960, guid: a8b7d26d8546aca409b042e9d7088ea6, type: 2}
-  - {fileID: 4648218403241986, guid: a921c43f04b87334999bbde246fc3e11, type: 2}
-  - {fileID: 4190643364541798, guid: 33e0db2e9e4488442948f176c93a0531, type: 2}
-  - {fileID: 4225562256647446, guid: 6a5a30c43ff95e24daccc251b9d6e8eb, type: 2}
-  - {fileID: 4214266953665870, guid: 9728a7044f793da4bba093757e1e00d4, type: 2}
 --- !u!212 &212234356033948470
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 64985e980ef30b34d9440be737ecb8ec, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.12190771, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
