@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour {
 
+
+    public float coolDown = 1;
+    public float cooldownTimer;
     public GameObject img;
     
     // Use this for initialization
@@ -13,15 +16,35 @@ public class Shield : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() { 
-        
-        if (Input.GetKeyDown(KeyCode.Space))
+    void Update()
+    {
+        if(cooldownTimer > 0)
         {
-            img.SetActive(true);
+            cooldownTimer -= Time.deltaTime;
             
         }
-        
+        if (cooldownTimer < 0)
+        {
+            img.SetActive(false);
+            cooldownTimer = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer == 0)
+        {
+            Turnon();
+            cooldownTimer = coolDown;
+        }
+
     }
-   
+
+    void Turnon()
+    {
+        img.SetActive(true);
+    }
+
+
+
+
+
+
 
 }
