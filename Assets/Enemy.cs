@@ -9,13 +9,15 @@ public class Enemy : MonoBehaviour {
     public float retreatDistance;
 
     public Transform player;
+    public Rigidbody2D rb;
+    public float pushForce = 5;
 
-
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-	}
+        rb = GetComponent<Rigidbody2D>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,5 +32,30 @@ public class Enemy : MonoBehaviour {
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
+        
 	}
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag.Equals("Wall"))
+        {
+            rb.AddForce(Vector2.up * pushForce, mode: ForceMode2D.Impulse);
+        }
+        if (col.gameObject.tag.Equals("BottomWall"))
+        {
+            rb.AddForce(Vector2.up * pushForce, mode: ForceMode2D.Impulse);
+        }
+        if (col.gameObject.tag.Equals("TopWall"))
+        {
+            rb.AddForce(Vector2.down * pushForce, mode: ForceMode2D.Impulse);
+        }
+        if (col.gameObject.tag.Equals("BorderWallL"))
+        {
+            rb.AddForce(Vector2.right * pushForce, mode: ForceMode2D.Impulse);
+        }
+        if (col.gameObject.tag.Equals("BorderWallR"))
+        {
+            rb.AddForce(Vector2.left * pushForce, mode: ForceMode2D.Impulse);
+        }
+
+    }
 }

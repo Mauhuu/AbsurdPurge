@@ -7,8 +7,11 @@ TagManager:
   - Enemy
   - Spawner
   - Wall
-  - NoT
   - SHIELD
+  - BottomWall
+  - TopWall
+  - BorderWallL
+  - BorderWallR
   layers:
   - Default
   - TransparentFX

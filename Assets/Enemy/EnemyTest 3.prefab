@@ -119,6 +119,8 @@ MonoBehaviour:
   stoppingDistance: 10
   retreatDistance: 7
   player: {fileID: 0}
+  rb: {fileID: 50125611013004058}
+  pushForce: 3
 --- !u!212 &212826959776709836
 SpriteRenderer:
   m_ObjectHideFlags: 1
