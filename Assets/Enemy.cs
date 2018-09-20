@@ -40,21 +40,41 @@ public class Enemy : MonoBehaviour {
         {
             rb.AddForce(Vector2.up * pushForce, mode: ForceMode2D.Impulse);
         }
+        else
+        {
+
+        }
         if (col.gameObject.tag.Equals("BottomWall"))
         {
             rb.AddForce(Vector2.up * pushForce, mode: ForceMode2D.Impulse);
+        }
+        else
+        {
+
         }
         if (col.gameObject.tag.Equals("TopWall"))
         {
             rb.AddForce(Vector2.down * pushForce, mode: ForceMode2D.Impulse);
         }
+        else
+        {
+
+        }
         if (col.gameObject.tag.Equals("BorderWallL"))
         {
             rb.AddForce(Vector2.right * pushForce, mode: ForceMode2D.Impulse);
         }
+        else
+        {
+
+        }
         if (col.gameObject.tag.Equals("BorderWallR"))
         {
             rb.AddForce(Vector2.left * pushForce, mode: ForceMode2D.Impulse);
+        }
+        else
+        {
+
         }
 
     }
